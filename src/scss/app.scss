@@ -9,10 +9,10 @@
 @keyframes rollads{
 	0% {transform: translateY(0);}
 	31.25% {transform: translateY(0);}
-	50% {transform: translateY(-35px);}
-	81.25% {transform: translateY(-35px);}
-	100% {transform: translateY(-70px);}
-}
+	50% {transform: translateY((-35px/41.4px)*1rem);}
+	81.25% {transform: translateY((-35px/41.4px)*1rem);}
+	100% {transform: translateY((-70px/41.4px)*1rem);}
+} 
 
 * {
 	-webkit-box-sizing: border-box;
