@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度音乐-移动版</title>
+	<link rel="stylesheet" href="./css/app.css">
+	<link rel="stylesheet" href="./css/swiper-3.3.1.min.css"> 
+	<link rel="icon" href="./img/favicon.ico" href="/favicon.ico" type="image/x-icon">
+</head>
+<body onload="loaded()">
+	<div class="top-fixed">
+		<header>
+			<div class="bar">
+				<div class="left"></div>
+				<div class="middle">
+					<p>百度音乐</p>
+				</div>
+				<div class="right">
+					<div class="input">
+						<p class="iconfont">&#xe600;搜歌曲</p>
+					</div>
+					<i class="iconfont">&#xe603;</i>
+				</div>
+			</div>
+			<div class="nav-wrap">
+				<div class="log on">
+					<p>推荐</p>
+				</div>
+				<div class="log">
+					<p>分类</p>
+				</div>
+				<div class="log">
+					<p>歌手</p>
+				</div>
+				<div class="log">
+					<p>歌单</p>
+				</div>
+				<div class="log">
+					<p>MV</p>
+				</div>
+				<div class="log">
+					<p>乐播</p>
+				</div>
+			</div>
+		</header>
+	</div>
+	<div class="banner">
+		<div class="swiper-container">
+  			<div class="swiper-wrapper">
+    			<div class="swiper-slide">
+    				<a href="http://2bai.co/1057548">
+    					<img src="./img/banner1.jpg">
+    				</a>
+    			</div>
+    			<div class="swiper-slide">
+    				<img src="./img/banner2.jpg">
+    			</div>
+    			<div class="swiper-slide">
+    				<img src="./img/banner3.jpg">
+    			</div>
+    			<div class="swiper-slide">
+					<img src="./img/banner4.jpg">
+    			</div>
+    			<div class="swiper-slide">
+    				<img src="./img/banner5.jpg">
+    			</div>
+  			</div>
+  			
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<div class="content">
+		<div class="mod-searchs">
+			<div class="top">
+				<div class="left">
+					<h2>实时热歌</h2>
+				</div>
+				<div class="right">
+					<span id="updatetime"></span>
+				</div>
+			</div>
+			<div class="bottom">
+				<span class="red english">TFBOYS</span>
+				<span class="white">从你的全世界路过</span>
+				<span class="red">梁静茹《呵护》</span>
+				<span class="white">薛之谦</span>
+				<span class="red">汪峰</span>
+				<span class="white">王菲</span>
+				<span class="red">微微一笑很倾城</span>
+				<span class="white">儿歌</span>
+				<span class="red">陈奕迅《I DO》</span>
+			</div>
+		</div>
+		<div class="mod-albums">
+			<div class="top">
+				<div class="left">
+					<h2>新碟上架</h2>
+				</div>
+			</div>
+			<div id="wrapper">
+				<div id="scroller">
+					<ul>
+						<li>
+							<img src="./img/scroll1.jpg">
+							<span>公主披风</span>
+							<p class="english">SNH48</p>
+						</li>
+						<li>
+							<img src="./img/scroll2.jpg">
+							<span>额尔古纳</span>
+							<p>陈鸿宇</p>
+						</li>
+						<li>
+							<img src="./img/scroll3.jpg">
+							<span>心时纪 · 大型国风主题演唱会</span>
+							<p>华语群星</p>
+						</li>
+						<li>
+							<img src="./img/scroll4.jpg">
+							<span class="english" id="english">Born Again Tomorrow</span>
+							<p>Bon Jovi</p>
+						</li>
+						<li>
+							<img src="./img/scroll5.jpg">
+							<span>就是这样</span>
+							<p>林采欣</p>
+						</li>
+						<li>
+							<img src="./img/scroll6.jpg">
+							<span>只要我们</span>
+							<p class="english">IDOL SCHOOL</p>
+						</li>
+						<li>
+							<img src="./img/scroll7.jpg">
+							<span>信仰</span>
+							<p>梁凡,乌拉多恩</p>
+						</li>
+						<li>
+							<img src="./img/scroll8.jpg">
+							<span>余波</span>
+							<p>卧轨的火车乐队</p>
+						</li>
+						<li>
+							<img src="./img/scroll9.jpg">
+							<span>呵护</span>
+							<p>梁静茹</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mod-list">
+			<div class="top">
+				<div class="left">
+					<h2>音乐榜单</h2>
+				</div>
+				<div class="right">
+					<span class="iconfont">更多&#xe601;</span>
+				</div>
+			</div>
+			<div class="middle">
+				<div class="items left listitems listleft" id="focus" onclick="changeone()">热歌榜</div>
+				<div class="items division"></div>
+				<div class="items listitems listmiddle" onclick="changetwo()">新歌榜</div>
+				<div class="items division"></div>
+				<div class="items right listitems listright" onclick="changethree()">King榜</div>
+			</div>
+			<div class="bottom">
+				<div class="title" id="first">
+					<div class="items">
+						<div class="left">
+							<img src="./img/xuezhiqian.jpg">
+							<i>01</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>演员</h3>
+								<p>薛之谦</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/wangfei.jpg">
+							<i>02</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>你在终点等我</h3>
+								<p>王菲</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/yangyang.jpg">
+							<i>03</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>微微一笑很倾城</h3>
+								<p>杨洋</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/gem.jpg">
+							<i>04</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>夜空中最亮的星</h3>
+								<p>G.E.M.邓紫棋</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/long.jpg">
+							<i>05</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>寂寞的人伤心的歌</h3>
+								<p>龙梅子，杨海彪</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+				</div>
+				<div class="title" id="second">
+					<div class="items">
+						<div class="left">
+							<img src="./img/wangfei.jpg">
+							<i>01</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>你在终点等我</h3>
+								<p>王菲</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/houxian.jpg">
+							<i>02</i>
+						</div>
+						<div class="middle">
+							<div class="iconfont up">&#xe606;</div>
+							<div class="song">
+								<h3>下完这场雨</h3>
+								<p>后弦</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/liangjingru.jpg">
+							<i>03</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>呵护</h3>
+								<p>梁静茹</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/chenxuedong.jpg">
+							<i>04</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>人间沙</h3>
+								<p>陈学冬</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/qilong.jpg">
+							<i>05</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>今生遇见你</h3>
+								<p>祁隆，任妙音</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+				</div>
+				<div class="title" id="third">
+					<div class="updatetime">
+						<div class="box">
+							<p>榜单数据将于</p>
+							<span id="updatetimetwo"></span>
+							<p>后更新</p>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/wangjunkai.jpg">
+							<i>01</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>树读</h3>
+								<p>王俊凯</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/xusong.jpg">
+							<i>02</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>江湖</h3>
+								<p>许嵩</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/scroll1.jpg">
+							<i>03</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>公主披风</h3>
+								<p>SNH48</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+					<div class="items">
+						<div class="left">
+							<img src="./img/wangqin.jpg">
+							<i>04</i>
+						</div>
+						<div class="middle">
+							<div class="change iconfont"></div>
+							<div class="song">
+								<h3>逍遥</h3>
+								<p>王青</p>
+							</div>
+						</div>
+						<div class="right iconfont">
+							<i class="iconfont">&#xe604;</i>
+						</div>
+					</div>
+				</div>
+				<div class="more-songs">
+					<p>查看该榜单>></p>
+				</div>
+			</div>
+		</div>
+		<div class="program">
+			<div class="top">
+				<div class="left">
+					<h2>热播节目</h2>
+				</div>
+				<div class="right">
+					<span class="iconfont">更多&#xe601;</span>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="programitems">
+					<img src="./img/program1.jpg">
+					<p>百度音乐新歌榜</p>
+				</div>
+				<div class="programitems">
+					<img src="./img/program2.jpg">
+					<p>吐槽疗养院</p>
+				</div>
+				<div class="programitems">
+					<img src="./img/program3.jpg">
+					<p>夜的私房话</p>
+				</div>
+			</div>
+		</div>
+		<div class="musiclist">
+			<div class="top">
+				<div class="left">
+					<h2>音乐歌单</h2>
+				</div>
+				<div class="right">
+					<span class="iconfont">更多&#xe601;</span>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="musicitems">
+					<div class="left">
+						<img src="./img/musiclist1.jpg">
+					</div>
+					<div class="middle">
+						<h3>你遇见的人都是为你而来</h3>
+						<p>华语&nbsp;&nbsp;流行&nbsp;&nbsp;治愈</p>
+					</div>
+					<div class="right">
+						<span class="iconfont">&#xe601;</span>
+					</div>
+				</div>
+				<div class="musicitems">
+					<div class="left">
+						<img src="./img/musiclist2.jpg">
+					</div>
+					<div class="middle">
+						<h3>秋天，就该送自己一场旅行</h3>
+						<p>流行&nbsp;&nbsp;快乐&nbsp;&nbsp;旅行</p>
+					</div>
+					<div class="right">
+						<span class="iconfont">&#xe601;</span>
+					</div>
+				</div>
+				<div class="musicitems">
+					<div class="left">
+						<img src="./img/musiclist3.jpg">
+					</div>
+					<div class="middle">
+						<h3>感受古风歌曲的诗情画意</h3>
+						<p>华语&nbsp;&nbsp;古风&nbsp;&nbsp;思念</p>
+					</div>
+					<div class="right">
+						<span class="iconfont">&#xe601;</span>
+					</div>
+				</div>
+				<div class="musicitems">
+					<div class="left">
+						<img src="./img/musiclist4.jpg">
+					</div>
+					<div class="middle">
+						<h3>质感节奏的绝赞英文歌</h3>
+						<p>欧美&nbsp;&nbsp;快乐&nbsp;&nbsp;流行</p>
+					</div>
+					<div class="right">
+						<span class="iconfont">&#xe601;</span>
+					</div>
+				</div>
+				<div class="musicitems">
+					<div class="left">
+						<img src="./img/musiclist5.jpg">
+					</div>
+					<div class="middle">
+						<h3>你遇见的人都是为你而来</h3>
+						<p>华语  流行  治愈</p>
+					</div>
+					<div class="right">
+						<span class="iconfont">&#xe601;</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="more">
+			<p>查看更多...</p>
+		</div>
+		<hr>
+		<div class="download">
+			<a href="http://2bai.co/1057548">手机必备音乐播放器，免费下载</a>
+		</div>
+		<hr>
+		<div class="white">
+			<div class="rollitems">
+				<p class="rollad1">海量MV视频，即点即看</p>
+				<p class="rollad2">K歌神器，自带声音美化</p>
+				<p class="rollad3">海量MV视频，即点即看</p>
+			</div>
+		</div>
+		<hr>
+		<footer>
+			<span>随心听</span>
+			<span class="division">丨</span>
+			<span>下载客户端</span>
+			<span class="division">丨</span>
+			<span>笑话APP</span>
+			<span class="division">丨</span>
+			<span>意见反馈</span>
+		</footer>
+	</div>
+	<script type="text/javascript" src="./js/change.js"></script>
+	<script type="text/javascript" src="./js/iscroll.js"></script>
+	<script type="text/javascript" src="./js/myscroll.js"></script>
+	<script type="text/javascript" src="./js/updatetime.js"></script>
+	<script type="text/javascript" src="./js/rem.js"></script>
+	<script type="text/javascript" src="./js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/initialization-swiper.js"></script>
+</body>
+</body>
+</html>
